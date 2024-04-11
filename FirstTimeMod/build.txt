@@ -1,0 +1,3 @@
+displayName = First Time Mod (WIP)
+author = Xyemy
+version = 0.1
