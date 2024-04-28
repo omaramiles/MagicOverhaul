@@ -1,0 +1,3 @@
+displayName = Magic Overhaul (WIP)
+author = Xyemy
+version = 0.1

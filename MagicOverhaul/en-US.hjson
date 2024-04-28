@@ -1,0 +1,15 @@
+Mods: {
+	MagicOverhaul: {
+		Items: {
+			MOStoneStaff: {
+				DisplayName: M O Stone Staff
+				Tooltip: ""
+			}
+
+			TutorialSword: {
+				DisplayName: Tutorial Sword
+				Tooltip: ""
+			}
+		}
+	}
+}

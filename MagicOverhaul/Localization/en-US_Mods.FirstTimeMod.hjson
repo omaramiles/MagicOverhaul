@@ -1,0 +1,11 @@
+Items: {
+	MOStoneStaff: {
+		Tooltip: Launches a spread of tiny pebbles
+		DisplayName: Stone Scatter Staff
+	}
+
+	TutorialSword: {
+		Tooltip: Starter sword
+		DisplayName: Tutorial Sword
+	}
+}
