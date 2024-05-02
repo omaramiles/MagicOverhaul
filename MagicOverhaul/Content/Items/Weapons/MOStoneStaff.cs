@@ -24,11 +24,11 @@ namespace MagicOverhaul.Content.Items.Weapons
             Item.knockBack = 3.2f;
 
 
-            Item.useTime = 20;
-            Item.useAnimation = 15;
+            Item.useTime = 35;
+            Item.useAnimation = 30;
 
             Item.shoot = ModContent.ProjectileType<StoneBall>();
-            Item.shootSpeed = 6f;
+            Item.shootSpeed = 8f;
         }
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
