@@ -361,3 +361,12 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# These are for developer's reference, not the repo
+ExampleMod/
+Terraria/
+tModLoader/
+TutorialMod/
+Tutorial/
+tModLoader.targets
+Mod Libraries/
