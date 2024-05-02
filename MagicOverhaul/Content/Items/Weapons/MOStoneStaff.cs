@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using MagicOverhaul.Content.Projectiles;
 
 namespace MagicOverhaul.Content.Items.Weapons
 {
@@ -26,8 +27,8 @@ namespace MagicOverhaul.Content.Items.Weapons
             Item.useTime = 20;
             Item.useAnimation = 15;
 
-            Item.shoot = ProjectileID.MudBall;
-            Item.shootSpeed = 8f;
+            Item.shoot = ModContent.ProjectileType<StoneBall>();
+            Item.shootSpeed = 6f;
         }
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
