@@ -21,7 +21,7 @@ namespace MagicOverhaul.Content.Projectiles
 				Projectile.Kill();
 			}
 			else {
-				Projectile.ai[0] += 0.1f;
+				Projectile.ai[0] += 0.05f;
 				if (Projectile.velocity.X != oldVelocity.X) {
 					Projectile.velocity.X = -oldVelocity.X;
 				}
@@ -32,12 +32,6 @@ namespace MagicOverhaul.Content.Projectiles
 				SoundEngine.PlaySound(SoundID.Item21, Projectile.position);
 			}
 			return false;
-		}
-
-        public override void OnKill(int timeLeft) {
-			while (Projectile.alpha < 255){
-				Projectile.alpha -= 1;
-			}
 		}
 
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone) {
