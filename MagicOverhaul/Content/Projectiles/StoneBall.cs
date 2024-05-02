@@ -10,8 +10,8 @@ namespace MagicOverhaul.Content.Projectiles
 	{
 		public override void SetDefaults() {
             Projectile.CloneDefaults(ProjectileID.BoulderStaffOfEarth);
-            Projectile.width = 16;
-			Projectile.height = 16;
+            Projectile.width = 10;
+			Projectile.height = 10;
 			Projectile.penetrate = 3;
 		}
 
@@ -21,15 +21,16 @@ namespace MagicOverhaul.Content.Projectiles
 				Projectile.Kill();
 			}
 			else {
-				Projectile.ai[0] += 0.05f;
+				Projectile.ai[0] += 0.1f;
 				if (Projectile.velocity.X != oldVelocity.X) {
 					Projectile.velocity.X = -oldVelocity.X;
 				}
 				if (Projectile.velocity.Y != oldVelocity.Y) {
 					Projectile.velocity.Y = -oldVelocity.Y;
-				}
-				Projectile.velocity *= 0.5f;
-				SoundEngine.PlaySound(SoundID.Item21, Projectile.position);
+                }
+                Projectile.velocity.X *= 0.15f;
+                Projectile.velocity.Y *= 0.3f;
+                SoundEngine.PlaySound(SoundID.Item21, Projectile.position);
 			}
 			return false;
 		}
