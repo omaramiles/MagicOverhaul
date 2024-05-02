@@ -1,3 +1,0 @@
-displayName = Tutorial
-author = Newb
-version = 0.1
