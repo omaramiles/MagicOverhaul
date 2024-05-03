@@ -7,16 +7,17 @@ using MagicOverhaul.Content.Projectiles;
 
 namespace MagicOverhaul.Content.Items.Weapons
 {
-	public class MOStoneStaff : ModItem
+	public class StoneBlastStaff : ModItem
 	{
         // The Display Name and Tooltip of this item can be edited in the Localization/en-US_Mods.Tutorial.hjson file.
 
 		public override void SetDefaults()
 		{
+            Item.staff[Type] = true;
             Item.width = 34;
             Item.height = 40;
             Item.useStyle = ItemUseStyleID.Shoot;
-            Item.UseSound = SoundID.Item71;
+            Item.UseSound = SoundID.Item69;
 
             Item.noMelee = true;
             Item.mana = 8;
@@ -24,11 +25,11 @@ namespace MagicOverhaul.Content.Items.Weapons
             Item.knockBack = 3.2f;
 
 
-            Item.useTime = 35;
-            Item.useAnimation = 30;
+            Item.useTime = 50;
+            Item.useAnimation = 45;
 
             Item.shoot = ModContent.ProjectileType<StoneBall>();
-            Item.shootSpeed = 8f;
+            Item.shootSpeed = 5f;
         }
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
@@ -53,7 +54,8 @@ namespace MagicOverhaul.Content.Items.Weapons
         public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(ItemID.DirtBlock, 10);
+			recipe.AddIngredient(ItemID.StoneBlock, 50);
+            recipe.AddIngredient(ItemID.FallenStar, 3);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.Register();
 		}
