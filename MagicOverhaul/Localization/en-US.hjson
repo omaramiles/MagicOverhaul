@@ -1,0 +1,15 @@
+Mods: {
+	MagicOverhaul: {
+		Items: {
+			MOStoneStaff: {
+				DisplayName: Stone Blasting Staff
+				Tooltip: Shoots a spread of stone balls
+			}
+
+			TutorialSword: {
+				DisplayName: Starter Sword
+				Tooltip: Testing sword
+			}
+		}
+	}
+}

@@ -8,12 +8,24 @@ namespace MagicOverhaul.Content.Projectiles
 {
 	public class StoneBall : ModProjectile
 	{
-		public override void SetDefaults() {
+
+        public override void SetDefaults() {
             Projectile.CloneDefaults(ProjectileID.BoulderStaffOfEarth);
             Projectile.width = 10;
 			Projectile.height = 10;
 			Projectile.penetrate = 3;
+			Projectile.friendly = true;
+			Projectile.hostile = false;
+			Projectile.aiStyle = 1;
 		}
+
+        public override void AI()
+        {
+            if (Main.rand.NextBool(10))
+            {
+                Dust.NewDust(Projectile.position + Projectile.velocity, Projectile.width, Projectile.height, DustID.Stone, Projectile.velocity.X * 0.2f, Projectile.velocity.Y * 0.2f);
+            }
+        }
 
         public override bool OnTileCollide(Vector2 oldVelocity) {
 			Projectile.penetrate--;
@@ -35,7 +47,15 @@ namespace MagicOverhaul.Content.Projectiles
 			return false;
 		}
 
-		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone) {
+        public override void OnKill(int timeLeft)
+        {
+            for (int k = 0; k < 5; k++)
+            {
+                Dust.NewDust(Projectile.position + Projectile.velocity, Projectile.width, Projectile.height, DustID.Stone, Projectile.oldVelocity.X * 0.1f, Projectile.oldVelocity.Y * 0.1f);
+            }
+        }
+
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone) {
 			Projectile.ai[0] += 0.1f;
 			Projectile.velocity *= 0.75f;
 		}
