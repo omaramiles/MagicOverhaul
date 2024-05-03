@@ -7,8 +7,6 @@ Mods: {
 			}
 
 			TutorialSword: {
-				DisplayName: Starter Sword
-				Tooltip: Testing sword
 			}
 		}
 	}
