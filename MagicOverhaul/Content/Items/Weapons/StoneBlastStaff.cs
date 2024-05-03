@@ -29,7 +29,7 @@ namespace MagicOverhaul.Content.Items.Weapons
             Item.useAnimation = 45;
 
             Item.shoot = ModContent.ProjectileType<StoneBall>();
-            Item.shootSpeed = 5f;
+            Item.shootSpeed = 6f;
         }
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
