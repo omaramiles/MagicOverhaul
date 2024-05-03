@@ -7,7 +7,7 @@ using MagicOverhaul.Content.Projectiles;
 
 namespace MagicOverhaul.Content.Items.Weapons
 {
-	public class MOStoneStaff : ModItem
+	public class StoneBlastStaff : ModItem
 	{
         // The Display Name and Tooltip of this item can be edited in the Localization/en-US_Mods.Tutorial.hjson file.
 
